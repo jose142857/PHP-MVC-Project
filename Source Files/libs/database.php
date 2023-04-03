@@ -1,4 +1,5 @@
 <?php
+if(!defined('IN_SITE'))die ('The request not found');
 // $conn = null;
 // connection function 
 function db_connect(){
@@ -67,7 +68,3 @@ var_export(excute_sql('update tb_user set username = "minhhoa"where id =2'));
 
 
 ?>
-
-
-
-
