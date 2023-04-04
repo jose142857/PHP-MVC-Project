@@ -1,5 +1,6 @@
 <?php
-if(!defined('IN_SITE'))die ('The request not found');
+
+if(defined('IN_SITE'))die ('The request not found');
 // $conn = null;
 // connection function 
 function db_connect(){
