@@ -1,19 +1,127 @@
-<?php include_once('../widgets/header.php'); ?>
-<h1>Login Page!</h1>
-<form method="post" action="">
-    <table>
-        <tr>
-            <td>Username</td>
-            <td><input type="text" name="username" value="" /></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" value="" /></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" name="login-btn" value="Login" /></td>
-        </tr>
-    </table>
-</form>
-<?php include_once('../widgets/footer.php'); ?>
+  <!-- <?php if (!defined('IN_SITE')) die('The request not found'); ?> -->
+
+
+
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+      <title>Admin page</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style type="text/css">
+          #header li {
+              float: left;
+              padding: 5px 10px;
+              border: solid 1px blue;
+              background: blue;
+              margin-right: 10px;
+              list-style: none;
+          }
+
+          #header {
+              overflow: hidden;
+          }
+
+          #header li a {
+              color: #fff;
+              text-decoration: none;
+          }
+
+          #header div {
+              float: right;
+              width: 250px;
+              line-height: 50px;
+          }
+
+          #header ul {
+              width: 700px;
+              float: left;
+          }
+
+          body {
+              background: #acacac;
+              margin: 0px;
+              padding: 0px;
+          }
+
+          #container {
+              width: 1000px;
+              margin: 0px auto;
+              overflow: hidden;
+              background: #fff;
+          }
+
+          #content {
+              border-top: solid 1px #ddd;
+              min-height: 600px;
+              padding: 10px 30px;
+          }
+
+          .button {
+              display: inline-block;
+              padding: 5px 10px;
+              background: blue;
+              color: #fff;
+              text-decoration: none;
+          }
+
+          .pagination a {
+              display: inline-block;
+              padding: 3px 5px;
+              background: blue;
+              color: #fff;
+              text-decoration: none;
+              margin-top: 10px;
+          }
+      </style>
+  </head>
+
+  <body>
+      <div id="container">
+          <div id="header">
+              <ul>
+                  <li>
+                      <a href="#">User</a>
+                  </li>
+                  <li>
+                      <a href="#">News</a>
+                  </li>
+                  <li>
+                      <a href="#">Comment</a>
+                  </li>
+              </ul>
+              <div>
+                  Welcome Admin |
+                  <a href="#">Login</a>
+                  <a href="#">Logout</a>
+              </div>
+          </div>
+          <div id="content">
+          </div>
+      </div>
+
+
+
+      <h1>Login Page!</h1>
+      <form method="post" action="">
+          <table>
+              <tr>
+                  <td>Username</td>
+                  <td><input type="text" name="username" value="" /></td>
+              </tr>
+              <tr>
+                  <td>Password</td>
+                  <td><input type="password" name="password" value="" /></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><input type="submit" name="login-btn" value="Login" /></td>
+              </tr>
+          </table>
+      </form>
+
+  </body>
+
+  </html>
+  <?php include_once('../widgets/footer.php'); ?>

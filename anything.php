@@ -20,14 +20,14 @@ if (empty($module) || empty($action)){
  
 // create path
 $path = 'admin/modules/'.$module . '/' . $action . '.php';
-echo $path;
+
 // in case of URL run correctly
 if (file_exists($path)) {
     include_once ('libs/session.php');
     include_once ('libs/database.php');
-    include_once ('libs/role.php');
-    include_once ('libs/helper.php');
-    include_once ($path);
+    // include_once ('libs/role.php');
+    // include_once ('libs/helper.php');
+    // include_once ($path);
 } 
 else {
     // URL wrong or not exist, show error
