@@ -1,6 +1,6 @@
-  <!-- <?php if (!defined('IN_SITE')) die('The request not found'); ?> -->
+ 
 
-
+<?php if (is_admin()){ ?>
 
   <!DOCTYPE html>
   <html>
@@ -10,70 +10,70 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style type="text/css">
-      #header li {
-          float: left;
-          padding: 5px 10px;
-          border: solid 1px blue;
-          background: blue;
-          margin-right: 10px;
-          list-style: none;
-      }
+          #header li {
+              float: left;
+              padding: 5px 10px;
+              border: solid 1px blue;
+              background: blue;
+              margin-right: 10px;
+              list-style: none;
+          }
 
-      #header {
-          overflow: hidden;
-      }
+          #header {
+              overflow: hidden;
+          }
 
-      #header li a {
-          color: #fff;
-          text-decoration: none;
-      }
+          #header li a {
+              color: #fff;
+              text-decoration: none;
+          }
 
-      #header div {
-          float: right;
-          width: 250px;
-          line-height: 50px;
-      }
+          #header div {
+              float: right;
+              width: 250px;
+              line-height: 50px;
+          }
 
-      #header ul {
-          width: 700px;
-          float: left;
-      }
+          #header ul {
+              width: 700px;
+              float: left;
+          }
 
-      body {
-          background: #acacac;
-          margin: 0px;
-          padding: 0px;
-      }
+          body {
+              background: #acacac;
+              margin: 0px;
+              padding: 0px;
+          }
 
-      #container {
-          width: 1000px;
-          margin: 0px auto;
-          overflow: hidden;
-          background: #fff;
-      }
+          #container {
+              width: 1000px;
+              margin: 0px auto;
+              overflow: hidden;
+              background: #fff;
+          }
 
-      #content {
-          border-top: solid 1px #ddd;
-          min-height: 600px;
-          padding: 10px 30px;
-      }
+          #content {
+              border-top: solid 1px #ddd;
+              min-height: 600px;
+              padding: 10px 30px;
+          }
 
-      .button {
-          display: inline-block;
-          padding: 5px 10px;
-          background: blue;
-          color: #fff;
-          text-decoration: none;
-      }
+          .button {
+              display: inline-block;
+              padding: 5px 10px;
+              background: blue;
+              color: #fff;
+              text-decoration: none;
+          }
 
-      .pagination a {
-          display: inline-block;
-          padding: 3px 5px;
-          background: blue;
-          color: #fff;
-          text-decoration: none;
-          margin-top: 10px;
-      }
+          .pagination a {
+              display: inline-block;
+              padding: 3px 5px;
+              background: blue;
+              color: #fff;
+              text-decoration: none;
+              margin-top: 10px;
+          }
       </style>
   </head>
 
@@ -92,9 +92,10 @@
                   </li>
               </ul>
               <div>
-                  Welcome Admin |
-                  <a href="#">Login</a>
-                  <a href="#">Logout</a>
+                  Hello <?php echo get_current_username(); ?> |
+                  <a href="<?php echo base_url('admin/?m=common&a=logout'); ?>">Logout</a>
               </div>
           </div>
           <div id="content">
+
+          <?php } ?>
